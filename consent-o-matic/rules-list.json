@@ -1,5 +1,6 @@
 {
   "references": [
-    "https://raw.githubusercontent.com/luckydonald/rule-lists/refs/heads/mane/consent-o-matic/rules/myanimelist.net/bottom-banner.json"
+    "https://raw.githubusercontent.com/luckydonald/rule-lists/refs/heads/mane/consent-o-matic/rules/myanimelist.net/bottom-banner.json",
+    "https://raw.githubusercontent.com/luckydonald/rule-lists/refs/heads/mane/consent-o-matic/rules/trakt.tv/cookie-banner.json"
   ]
 }
