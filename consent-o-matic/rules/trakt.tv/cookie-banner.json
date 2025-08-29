@@ -1,0 +1,56 @@
+{
+    "$schema": "https://raw.githubusercontent.com/cavi-au/Consent-O-Matic/master/rules.schema.json",
+    "lucky lucy list — trakt.tv — cookie banner": {
+        "detectors": [
+            {
+                "presentMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "selector": ".cm.cm--box[role=\"dialog\"][aria-modal=\"true\"]"
+                        }
+                    }
+                ],
+                "showingMatcher": [
+                    {
+                        "type": "css",
+                        "target": {
+                            "childFilter": {
+                                "target": {
+                                    "selector": "button",
+                                    "textFilter": [
+                                        "Cookie Settings"
+                                    ]
+                                }
+                            },
+                            "selector": "[aria-hidden=\"false\"].cm.cm--box[role=\"dialog\"][aria-modal=\"true\"]"
+                        }
+                    }
+                ]
+            }
+        ],
+        "methods": [
+            {
+                "name": "HIDE_CMP"
+            },
+            {
+                "name": "OPEN_OPTIONS"
+            },
+            {
+                "action": {
+                    "type": "click",
+                    "target": {
+                        "selector": "[aria-hidden=\"false\"].cm.cm--box[role=\"dialog\"][aria-modal=\"true\"] button[data-role=\"necessary\"]"
+                    }
+                },
+                "name": "DO_CONSENT"
+            },
+            {
+                "name": "SAVE_CONSENT"
+            },
+            {
+                "name": "UTILITY"
+            }
+        ]
+    }
+}
